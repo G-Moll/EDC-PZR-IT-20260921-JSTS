@@ -1,45 +1,15 @@
 # Proyecto TypeScript #
 
----
-## 01. Crear Proyecto ##
+## 01. Estructura de Carpetas ##
 
-01.01 Terminal o Cmd
-```bash
-$ which node
-$ node -v
-```
-> La **versión** instalada de **Node** debe ser al menos **22.6**
+> [!NOTE]
+> Estos son los archivos y/o carpetas principales del proyecto.
+> Algunos se van a generar automáticamente.
+> Algunos se van a generar manualmente.
 
-01.02 Terminal o Cmd
-```bash
-$ mkdir ts-project
-$ cd ts-project
-$ npm init -y
-```
-
-01.03 Instalar dependencias
-> La versión de **TypeScript** deber ser **5.9.2**
-```bash
-$ npm i -D typescript@5.9.2
-$ npm i -D nodemon
-```
-
----
-## 02. Configurar Proyecto ##
-02.01 Archivo **package.json**
-![package.json](imgs/package.json.png)
-
-02.02 Archivo **tsconfig.json**
-![tsconfig.json](imgs/tsconfig.json.png)
-
-02.03 Archivo **nodemon.json**
-![nodemon.json](imgs/nodemon.json.png)
-
----
-## 03. Estructura de Carpetas ##
 
 ```
-📁 mi-proyecto/
+📁 ts-project/
 ├── 📁 node_modules/
 │
 ├── 📁 dist/
@@ -54,25 +24,126 @@ $ npm i -D nodemon
 ├── 📄 package-lock.js
 ├── 📄 package.js
 └── 📄 tsconfig.js
+
 ```
 
 ---
-## 04 Código fuente ##
 
-04.01 Archivo src/app.ts
-> Modifica el valor de **numOne** y **numTwo** antes de cada operación
+## 02. Crear Proyecto ##
 
-![app.ts](imgs/app.ts.png)
+02.01 Terminal o Cmd
 
-04.02 Archivo src/utils.ts
-![utils.ts](imgs/utils.ts.png)
+> [!CAUTION]
+> La **versión** instalada de **Node** debe ser al menos **22.6**
+
+```bash
+$ which node
+$ node -v
+```
+
+
+02.02 Terminal o Cmd
+
+> [!NOTE]
+> El comando `$ npm init -y` crea el archivo **package.json**
+
+```bash
+$ mkdir ts-project
+$ cd ts-project
+$ npm init -y
+```
+
+02.03 Instalar dependencias
+
+> [!CAUTION]
+> La versión de **TypeScript** deber ser la **5.9.2**
+
+> [!NOTE]
+> El comando `$ npm i ` modifica el archivo **package.json**
+
+```bash
+$ npm i -D typescript@5.9.2
+$ npm i -D nodemon
+```
+
+02.04 Crear archivo **tsconfig.json** en la carpeta del proyecto
+> [!NOTE]
+> Se puede crear con el comando **`$ touch`**
+> Se puede crear desde el **Sistema Operativo**
+> Se puede crear desde el **Editor de Código**
+
+02.05 Crear archivo **nodemon.json** en la carpeta del proyecto
+> [!NOTE]
+> Se puede crear con el comando **`$ touch`**
+> Se puede crear desde el **Sistema Operativo**
+> Se puede crear desde el **Editor de Código**
 
 
 ---
+## 03. Configurar Proyecto ##
+03.01 Configurar archivo **package.json**
+
+> [!NOTE]
+> Actualiza el archivo **package.json** con las siguientes opciones
+
+![package.json](imgs/package.json.png)
+
+
+03.02 Archivo **tsconfig.json**
+
+> [!NOTE]
+> Actualiza el archivo **tsconfig.json** con las siguientes opciones
+
+![tsconfig.json](imgs/tsconfig.json.png)
+
+03.03 Archivo **nodemon.json**
+
+> [!NOTE]
+> Actualiza el archivo **nodemon.json** con las siguientes opciones
+
+![nodemon.json](imgs/nodemon.json.png)
+
+
+---
+## 04 Código Fuente ##
+
+04.01 **Crear Archivos** en la **Carpeta Principal del Proyecto**
+
+> [!NOTE]
+> Se puede crear con el comando **`$ touch`**
+> Se puede crear desde el **Sistema Operativo**
+> Se puede crear desde el **Editor de Código**
+
+04.01.01 Crear archivo **src/app.ts**
+04.01.02 Crear archivo **src/utils.ts**
+
+
+04.02 **Actualizar** archivo **src/app.ts**
+
+> [!NOTE]
+> Actualiza el archivo **src/app.ts** con las siguientes opciones
+
+![app.ts](imgs/app.ts.png)
+
+
+04.03 **Actualizar** archivo **src/utils.ts**
+
+> [!NOTE]
+> Actualiza el archivo **src/utils.ts** con las siguientes opciones
+
+![utils.ts](imgs/utils.ts.png)
+
+---
 ## 05 Ejecutar Proyecto ##
+
+> [!NOTE]
 > Cada tarea debe ejecutarse en ventanas separadas
 
-05.01 Transpilar Ts > Js
+> [!NOTE]
+> A diferencia de los IDEs (Visual Studio, IntelliJ Idea, Eclipse, etc.), allí un mismo botón ejecuta la compilación (Build/Compile) y la ejecución (Run) de manera consecutiva y conjunta (Build & Run), pero también lo pueden hacer de forma separada que no es lo más común.
+> Con dos terminales se hacen las mismas tareas que esos IDEs uno para Compilar/Transpilar (`$npm run dev:ts`) y otro para ejecutar el Código Transpilado (`$npm run dev:js`)
+
+05.01 **Transpilar** de ***TypeScript*** a ***JavaScript***
 ```bash
 $ npm run dev:ts
 ```
@@ -83,6 +154,10 @@ $ npm run dev:js
 ```
 
 05.03 Resultado esperado:
+
+> [!NOTE]
+> Los resultados pueden variar, según los valores de las variables
+
 ```bash
 2 + 3 = 5
 2 - 3 = -1
