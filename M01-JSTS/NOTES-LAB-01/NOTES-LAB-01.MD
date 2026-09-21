@@ -66,17 +66,16 @@ $ npm i -D typescript@5.9.2
 $ npm i -D nodemon
 ```
 
-02.04 Crear archivo **tsconfig.json** en la carpeta del proyecto
+02.04 **Crear archivos de configuración** en la **carpeta del proyecto**
+
 > [!NOTE]
 > Se puede crear con el comando **`$ touch`**
 > Se puede crear desde el **Sistema Operativo**
 > Se puede crear desde el **Editor de Código**
 
-02.05 Crear archivo **nodemon.json** en la carpeta del proyecto
-> [!NOTE]
-> Se puede crear con el comando **`$ touch`**
-> Se puede crear desde el **Sistema Operativo**
-> Se puede crear desde el **Editor de Código**
+02.04.01 Crear archivo **tsconfig.json**
+02.04.01 Crear archivo **nodemon.json**
+
 
 
 ---
