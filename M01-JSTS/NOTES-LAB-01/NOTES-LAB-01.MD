@@ -20,10 +20,10 @@
 │   ├── 📄 app.ts
 │   └── 📄 utils.ts
 │
-├── 📄 nodemon.js
-├── 📄 package-lock.js
-├── 📄 package.js
-└── 📄 tsconfig.js
+├── 📄 nodemon.json
+├── 📄 package-lock.json
+├── 📄 package.json
+└── 📄 tsconfig.json
 
 ```
 
