@@ -117,8 +117,8 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 > Se puede crear desde el **Sistema Operativo**
 > Se puede crear desde el **Editor de Código**
 
-04.01.01 Crear archivo **src/app.ts**
-04.01.02 Crear archivo **src/utils.ts**
+04.01.01 Crear archivo **src/app.ts**  
+04.01.02 Crear archivo **src/utils.ts**  
 
 
 04.02 **Actualizar** archivo **src/app.ts**
