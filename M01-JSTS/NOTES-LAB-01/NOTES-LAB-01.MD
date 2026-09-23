@@ -74,9 +74,12 @@ $ npm i -D nodemon
 > Se puede crear desde el **Editor de Código**
 
 02.04.01 Crear archivo **tsconfig.json**
+
 Crear el archivo ***tsconfig.json*** en la carpeta raíz del proyecto
 
+
 02.04.02 Crear archivo **nodemon.json**
+
 Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 
 
