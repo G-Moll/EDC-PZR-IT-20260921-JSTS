@@ -69,9 +69,9 @@ $ npm i -D nodemon
 02.04 **Crear archivos de configuración** en la **carpeta raíz del proyecto**
 
 > [!NOTE]
-> Se puede crear con el comando **`$ touch`**
-> Se puede crear desde el **Sistema Operativo**
-> Se puede crear desde el **Editor de Código**
+> Se puede crear con el comando **`$ touch`**  
+> Se puede crear desde el **Sistema Operativo**  
+> Se puede crear desde el **Editor de Código**  
 
 02.04.01 Crear archivo **tsconfig.json**  
 Crear el archivo ***tsconfig.json*** en la carpeta raíz del proyecto
@@ -83,10 +83,10 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 
 
 ---
-## 03. Configurar Proyecto ##
+## 03. Configurar Proyecto ##  
 03.01 Configurar archivo **package.json**
 
-> [!NOTE]
+> [!NOTE]  
 > Actualiza el archivo **package.json** con las siguientes opciones
 
 ![package.json](imgs/package.json.png)
@@ -94,14 +94,14 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 
 03.02 Archivo **tsconfig.json**
 
-> [!NOTE]
+> [!NOTE]  
 > Actualiza el archivo **tsconfig.json** con las siguientes opciones
 
 ![tsconfig.json](imgs/tsconfig.json.png)
 
 03.03 Archivo **nodemon.json**
 
-> [!NOTE]
+> [!NOTE]  
 > Actualiza el archivo **nodemon.json** con las siguientes opciones
 
 ![nodemon.json](imgs/nodemon.json.png)
@@ -113,9 +113,9 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 04.01 **Crear Archivos** en la **Carpeta Principal del Proyecto**
 
 > [!NOTE]
-> Se puede crear con el comando **`$ touch`**
-> Se puede crear desde el **Sistema Operativo**
-> Se puede crear desde el **Editor de Código**
+> Se puede crear con el comando **`$ touch`**  
+> Se puede crear desde el **Sistema Operativo**  
+> Se puede crear desde el **Editor de Código**  
 
 04.01.01 Crear archivo **src/app.ts**  
 04.01.02 Crear archivo **src/utils.ts**  
@@ -123,7 +123,7 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 
 04.02 **Actualizar** archivo **src/app.ts**
 
-> [!NOTE]
+> [!NOTE]  
 > Actualiza el archivo **src/app.ts** con las siguientes opciones
 
 ![app.ts](imgs/app.ts.png)
@@ -131,7 +131,7 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 
 04.03 **Actualizar** archivo **src/utils.ts**
 
-> [!NOTE]
+> [!NOTE]  
 > Actualiza el archivo **src/utils.ts** con las siguientes opciones
 
 ![utils.ts](imgs/utils.ts.png)
@@ -139,10 +139,10 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 ---
 ## 05 Ejecutar Proyecto ##
 
-> [!NOTE]
+> [!NOTE]  
 > Cada tarea debe ejecutarse en ventanas separadas
 
-> [!NOTE]
+> [!NOTE]  
 > A diferencia de los IDEs (Visual Studio, IntelliJ Idea, Eclipse, etc.), allí un mismo botón ejecuta la compilación (Build/Compile) y la ejecución (Run) de manera consecutiva y conjunta (Build & Run), pero también lo pueden hacer de forma separada que no es lo más común.
 > Con dos terminales se hacen las mismas tareas que esos IDEs uno para Compilar/Transpilar (`$npm run dev:ts`) y otro para ejecutar el Código Transpilado (`$npm run dev:js`)
 
