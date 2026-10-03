@@ -1,4 +1,4 @@
-# Proyecto Web Vanilla TypeScript #
+# Proyecto Node Vanilla TypeScript #
 
 ## 01. Estructura de Carpetas ##
 
@@ -9,19 +9,47 @@
 
 
 ```
-📁 ts-project/
+📁 ts-web-project/
 ├── 📁 node_modules/
 │
 ├── 📁 dist/
-│   ├── 📄 app.js
-│   └── 📄 utils.js
+│   ├── 📁 pages-scripts/
+│   │   ├── 📄 dom.js
+│   │   ├── 📄 events.js
+│   │   └── 📄 request.js
+│   │
+│   ├── 📁 utils/
+│   │   └── 📄 utils.js
+│   │
+│   └── 📄 app.js
+│
 │
 ├── 📁 src/
-│   ├── 📄 app.ts
-│   └── 📄 utils.ts
+│   ├── 📁 pages-scripts/
+│   │   ├── 📄 dom.ts
+│   │   ├── 📄 events.ts
+│   │   └── 📄 request.ts
+│   │
+│   ├── 📁 utils/
+│   │   └── 📄 utils.ts
+│   │
+│   └── 📄 app.ts
+│
+│
+├── 📁 views/
+│   ├── 📁 css/
+│   │   ├── 📄 base.css
+│   │   └── 📄 layout.css
+│   │
+│   └── 📁 pages-views/
+│       ├── 📄 dom.html
+│       ├── 📄 events.html
+│       └── 📄 requests.html
+│
+│
+├── 📄 index.html
 │
 ├── 📄 nodemon.json
-├── 📄 package-lock.json
 ├── 📄 package.json
 └── 📄 tsconfig.json
 ```
@@ -30,10 +58,9 @@
 
 ## 02. Crear Proyecto ##
 
-02.01 Terminal o Cmd
-
-> [!CAUTION] 
-> La **versión** instalada de **Node** debe ser al menos **22.6**
+02.01 Terminal o Cmd  
+> [!CAUTION]  
+> La **versión** instalada de **Node** debe ser al menos **22.6**  
 
 ```bash
 $ which node
@@ -41,10 +68,9 @@ $ node -v
 ```
 
 
-02.02 Terminal o Cmd
-
+02.02 Terminal o Cmd  
 > [!NOTE]  
-> El comando `$ npm init -y` crea el archivo **package.json**
+> El comando `$ npm init -y` crea el archivo **package.json**  
 
 ```bash
 $ mkdir ts-project
@@ -52,52 +78,52 @@ $ cd ts-project
 $ npm init -y
 ```
 
-02.03 Instalar dependencias
-
+02.03 Instalar dependencias  
 > [!CAUTION]  
-> La versión de **TypeScript** deber ser la **5.9.2**
+> La versión de **TypeScript** deber ser la **5.9.2**  
 
 > [!NOTE]  
-> El comando `$ npm i ` modifica el archivo **package.json**
+> El comando `$ npm i ` modifica el archivo **package.json**  
 
 ```bash
 $ npm i -D typescript@5.9.2
 $ npm i -D nodemon
 ```
 
-02.04 **Crear archivos de configuración** en la **carpeta raíz del proyecto**
+02.04 **Crear archivos de configuración** en la **carpeta raíz del proyecto**  
 
-> [!NOTE]
+> [!NOTE]  
 > Se puede crear con el comando **`$ touch`**  
 > Se puede crear desde el **Sistema Operativo**  
 > Se puede crear desde el **Editor de Código**  
 
 02.04.01 Crear archivo **tsconfig.json**  
-Crear el archivo ***tsconfig.json*** en la carpeta raíz del proyecto
-
+Crear el archivo ***tsconfig.json*** en la carpeta raíz del proyecto  
 
 02.04.02 Crear archivo **nodemon.json**  
-Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
-
+Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto  
 
 
 ---
 ## 03. Configurar Proyecto ##  
-
 03.01 Configurar archivo **package.json**  
+
 > [!NOTE]  
 > Actualiza el archivo **package.json** con las siguientes opciones  
+
 ![package.json](imgs/package.json.png)  
 
 
 03.02 Archivo **tsconfig.json**  
 > [!NOTE]  
 > Actualiza el archivo **tsconfig.json** con las siguientes opciones  
-![tsconfig.json](imgs/tsconfig.json.png)  
+
+![tsconfig.json](imgs/tsconfig.json.png)
 
 03.03 Archivo **nodemon.json**  
 > [!NOTE]  
 > Actualiza el archivo **nodemon.json** con las siguientes opciones  
+
 ![nodemon.json](imgs/nodemon.json.png)
 
 
@@ -106,7 +132,7 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 
 04.01 **Crear Archivos** en la **Carpeta Principal del Proyecto**  
 > [!NOTE]  
-> Se pueden crear con el comando **`$ touch`**  
+> Se puede crear con el comando **`$ touch`**  
 > Se puede crear desde el **Sistema Operativo**  
 > Se puede crear desde el **Editor de Código**  
 
@@ -114,16 +140,18 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 04.01.02 Crear archivo **src/utils.ts**  
 
 
-04.02 **Actualizar** archivo **src/app.ts**  
+04.02 **Actualizar** archivo **src/app.ts**
 > [!NOTE]  
 > Actualiza el archivo **src/app.ts** con las siguientes opciones  
-![app.ts](imgs/app.ts.png)  
+
+![app.ts](imgs/app.ts.png)
 
 
-04.03 **Actualizar** archivo **src/utils.ts**  
+04.03 **Actualizar** archivo **src/utils.ts**
 > [!NOTE]  
 > Actualiza el archivo **src/utils.ts** con las siguientes opciones  
-![utils.ts](imgs/utils.ts.png)  
+
+![utils.ts](imgs/utils.ts.png)
 
 ---
 ## 05 Ejecutar Proyecto ##
@@ -132,8 +160,8 @@ Crear el archivo ***nodemon.json*** en la carpeta raíz del proyecto
 > Cada tarea debe ejecutarse en ventanas separadas
 
 > [!NOTE]  
-> A diferencia de los IDEs (Visual Studio, IntelliJ Idea, Eclipse, etc.), allí un mismo botón ejecuta la compilación (Build/Compile) y la ejecución (Run) de manera consecutiva y conjunta (Build & Run), pero también lo pueden hacer de forma separada que no es lo más común.  
-> Con dos terminales se hacen las mismas tareas que esos IDEs uno para Compilar/Transpilar (`$npm run dev:ts`) y otro para ejecutar el Código Transpilado (`$npm run dev:js`)  
+> A diferencia de los IDEs (Visual Studio, IntelliJ Idea, Eclipse, etc.), allí un mismo botón ejecuta la compilación (Build/Compile) y la ejecución (Run) de manera consecutiva y conjunta (Build & Run), pero también lo pueden hacer de forma separada que no es lo más común.
+> Con dos terminales se hacen las mismas tareas que esos IDEs uno para Compilar/Transpilar (`$npm run dev:ts`) y otro para ejecutar el Código Transpilado (`$npm run dev:js`)
 
 05.01 **Transpilar** de ***TypeScript*** a ***JavaScript***
 ```bash
