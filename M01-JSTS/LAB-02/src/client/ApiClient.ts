@@ -10,4 +10,14 @@ async function fetchJson<T>( url: string ): Promise<T> {
     return response.json() as Promise<T>;
 }
 
-export let name: string = "Joshua";
+function getUsers(): Promise<User[]> {
+    return fetchJson<User[]>( "https://jsonplaceholder.typicode.com/users" );
+}
+
+let name: string = "Joshua";
+
+
+export {
+    name,
+    getUsers
+};
