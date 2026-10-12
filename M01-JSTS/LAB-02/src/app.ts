@@ -28,12 +28,16 @@ async function displayUsers(): Promise<void> {
     }
 }
 
-async function displayPosts(): Promise<void> {
+async function displayPosts( userId: undefined | number = undefined ): Promise<void> {
     try {
         const taskStart = performance.now();
 
         let posts: Post[] = await getPosts();
-        
+
+        posts = !! userId ?
+            posts.filter( post => post.userId == userId ) :
+            posts;
+
         posts.forEach( ( post, index ) => {
             console.log( `🆔 ${ post.userId } - 📫 ${ post.id }` );
             console.log( `📧 ${ post.title }` );
