@@ -6,6 +6,8 @@ console.log( name );
 
 async function displayUsers(): Promise<void> {
     try {
+        const taskStart = performance.now();
+
         const users: User[] = await getUsers();
 
         users.forEach( user => {
@@ -14,6 +16,12 @@ async function displayUsers(): Promise<void> {
             console.log( `   🏢 ${ user.company.name }` );
             console.log( `   🌍 ${ user.address.city }\n` );
         });
+
+        const taskEnd = performance.now();
+        const timeLapsed = taskEnd - taskStart;
+        
+        console.log( `✅ Usuarios obtenidos: ${ users.length }` );
+        console.log( `🥦 La tarea tardó ${ timeLapsed.toFixed( 3 ) } milisegundos\n` );
     }
     catch( e ) {
         console.error( "Error al consultar los datos", e );
@@ -22,6 +30,8 @@ async function displayUsers(): Promise<void> {
 
 async function displayPosts(): Promise<void> {
     try {
+        const taskStart = performance.now();
+
         let posts: Post[] = await getPosts();
         
         posts.forEach( ( post, index ) => {
@@ -29,6 +39,12 @@ async function displayPosts(): Promise<void> {
             console.log( `📧 ${ post.title }` );
             console.log( `📄 ${ post.body }\n` );
         });
+
+        const taskEnd = performance.now();
+        const timeLapsed = taskEnd - taskStart;
+
+        console.log( `✅ Posts obtenidos: ${ posts.length }` );
+        console.log( `🥦 La tarea tardó ${ timeLapsed.toFixed( 3 ) } milisegundos\n` );
     }
     catch( e ) {
         console.log( "Error al consultar los datos", e );
