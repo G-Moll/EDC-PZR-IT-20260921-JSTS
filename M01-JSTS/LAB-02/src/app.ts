@@ -57,3 +57,5 @@ async function displayPosts( userId: undefined | number = undefined ): Promise<v
 
 displayUsers();
 displayPosts();
+displayPosts( 3 );
+displayPosts( 7 );
