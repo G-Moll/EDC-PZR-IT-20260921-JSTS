@@ -1,6 +1,8 @@
 import { User } from "../models/User.js";
 import { Post } from "../models/Post.js";
 
+let name: string = "Joshua";
+
 async function fetchJson<T>( url: string ): Promise<T> {
     const response = await fetch( url );
 
@@ -18,8 +20,6 @@ function getUsers(): Promise<User[]> {
 function getPosts(): Promise<Post[]> {
     return fetchJson<Post[]>( "https://jsonplaceholder.typicode.com/posts" );
 }
-
-let name: string = "Joshua";
 
 export {
     name,
