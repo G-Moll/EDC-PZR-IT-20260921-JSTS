@@ -55,24 +55,25 @@ async function displayPosts( userId: undefined | number = undefined ): Promise<v
 
 async function displayUsersPosts(): Promise<void> {
     try {
+        const taskStart = performance.now();
+
         const [ users, posts ]: [ User[], Post[] ] = await Promise.all([
             getUsers(),
             getPosts()
         ]);
 
-        const mapUserPosts: Map<number, Post[]> = new Map();
+        const mapUsersPosts: Map<number, Post[]> = new Map();
         
         posts.forEach( post => {
-            if( ! mapUserPosts.has( post.userId ) ) {
-                mapUserPosts.set( post.userId, [] );
+            if( ! mapUsersPosts.has( post.userId ) ) {
+                mapUsersPosts.set( post.userId, [] );
             }
-            mapUserPosts.get( post.userId )!.push( post );
+            mapUsersPosts.get( post.userId )!.push( post );
         });
-        // { 1: [], 2: [], 3: [] }
 
         users.forEach( user => {
-            const userPosts: Post[] = mapUserPosts.get( user.id ) ?? [];
-            console.log( `Usuario ${ user.id }, Nombre ${ user.name }` );
+            const userPosts: Post[] = mapUsersPosts.get( user.id ) ?? [];
+            console.log( `Usuario 🧑🏻 ${ user.id }: ${ user.name }` );
             
             if( userPosts.length == 0 ) {
                 console.log( `Usuario sin posts...` );
@@ -80,11 +81,18 @@ async function displayUsersPosts(): Promise<void> {
             }
 
             userPosts.forEach( post => {
-                console.log( `  Post ${ post.id } - ${ post.title }` )
+                console.log( `  Post 📄 ${ post.id } - ${ post.title }` )
             });
 
             console.log( "" )
         });
+
+        const taskEnd = performance.now();
+        const timeLapsed = taskEnd - taskStart;
+
+        console.log( `✅ Usuarios procesados: ${ users.length }` );
+        console.log( `✅ Posts distribuidos: ${ posts.length }` );
+        console.log( `🥦 La tarea tardó ${ timeLapsed.toFixed( 3 ) } milisegundos\n` );
     }
     catch( e ) {
         console.log( "Error al consumir los datos..." )

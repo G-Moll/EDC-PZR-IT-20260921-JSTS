@@ -3,9 +3,6 @@ import { displayUsers, displayPosts, displayUsersPosts } from "./client/displayD
 
 console.log( name );
 
-
-
-
 // Todos los usuarios
 // displayUsers();
 
