@@ -11,10 +11,9 @@ function setStatus( message: string, state: StatusState ): void {
     const statusDiv = getElement<HTMLDivElement>( "#status" );
 
     statusDiv.classList.remove( "is-loading", "is-success", "is-error" );
-
     statusDiv.classList.add( state );
-
     statusDiv.textContent = message;
+
     console.log( message );
 }
 
