@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+
+        "noEmitOnError": true,
+
+        "outDir": "./dist",
+        "rootDir": "./src",
+
+        "strict": true,
+        "verbatimModuleSyntax": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+
+        "types": [],
+        "lib": [ "DOM", "DOM.Iterable", "ESNext" ],
+        "sourceMap": true
+    },
+    "include": [ "src/**/*" ],
+    "exclude": [ "node_modules", "dist" ]
+}

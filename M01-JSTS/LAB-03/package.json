@@ -1,0 +1,16 @@
+{
+    "name": "session-01.ts5",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "scripts": {
+        "dev:ts": "tsc --watch",
+        "dev:js": "lite-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^5.9.2"
+    }
+}

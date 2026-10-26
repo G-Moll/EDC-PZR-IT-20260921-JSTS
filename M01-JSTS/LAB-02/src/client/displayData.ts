@@ -74,7 +74,7 @@ async function displayUsersPosts(): Promise<void> {
         users.forEach( user => {
             const userPosts: Post[] = mapUsersPosts.get( user.id ) ?? [];
             console.log( `Usuario 🧑🏻 ${ user.id }: ${ user.name }` );
-            
+
             if( userPosts.length == 0 ) {
                 console.log( `Usuario sin posts...` );
                 return;
@@ -98,7 +98,6 @@ async function displayUsersPosts(): Promise<void> {
         console.log( "Error al consumir los datos..." )
     }
 }
-
 
 export {
     displayUsers,

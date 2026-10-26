@@ -1,0 +1,84 @@
+/* ==========================================================================
+     base.css — Reset, variables y estilos fundamentales
+     ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Colores */
+    --color-primario: #2563eb;
+    --color-primario-hover: #1d4ed8;
+    --color-primario-activo: #1e40af;
+    --color-texto: #1f2937;
+    --color-texto-suave: #6b7280;
+    --color-fondo: #f9fafb;
+    --color-superficie: #ffffff;
+    --color-borde: #e5e7eb;
+    --color-exito: #059669;
+    --color-error: #dc2626;
+    --color-info: #0284c7;
+
+    /* Espaciado */
+    --espaciado-xs: 0.25rem;
+    --espaciado-sm: 0.5rem;
+    --espaciado-md: 1rem;
+    --espaciado-lg: 1.5rem;
+    --espaciado-xl: 2rem;
+
+    /* Bordes */
+    --radio-sm: 4px;
+    --radio-md: 8px;
+    --radio-lg: 12px;
+
+    /* Sombras */
+    --sombra-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --sombra-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --sombra-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+    /* Transiciones */
+    --transicion-rapida: 150ms ease;
+    --transicion-media: 250ms ease;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    padding: var(--espaciado-lg);
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--color-texto);
+}
+
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Accesibilidad: foco visible consistente */
+:focus-visible {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 2px;
+}

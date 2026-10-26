@@ -1,0 +1,51 @@
+/* ==========================================================================
+     layout.css — Estructura y distribución de la página
+     ========================================================================== */
+
+h1 {
+    margin-bottom: var(--espaciado-lg);
+    padding-bottom: var(--espaciado-md);
+    border-bottom: 2px solid var(--color-borde);
+}
+
+/* Zona de acciones: botón + estado en una fila flexible */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--espaciado-md);
+    margin-bottom: var(--espaciado-lg);
+}
+
+/* Contenedor del video, para centrarlo y darle contexto */
+.video-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espaciado-sm);
+    margin-bottom: var(--espaciado-lg);
+}
+
+.video-wrapper__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Responsive: en pantallas pequeñas apilamos acciones */
+@media (max-width: 600px) {
+    body {
+        padding: var(--espaciado-md);
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .acciones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
