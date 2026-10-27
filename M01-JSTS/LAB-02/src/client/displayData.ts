@@ -1,6 +1,6 @@
-import { Post } from "../models/Post";
-import { User } from "../models/User";
-import { getUsers, getPosts } from "./ApiClient";
+import { Post } from "../models/Post.js";
+import { User } from "../models/User.js";
+import { getUsers, getPosts } from "./ApiClient.js";
 
 async function displayUsers(): Promise<void> {
     try {
