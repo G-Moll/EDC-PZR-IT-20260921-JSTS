@@ -1,5 +1,2 @@
-import { type StatusState, getElement, initStatus, hideStatus, setStatus  } from "./utils/utils.js";
-
-initStatus();
-
+console.log( "Running App" );
 export {};
